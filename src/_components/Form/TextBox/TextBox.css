@@ -26,8 +26,12 @@
 	font-size: 1rem;
 	padding: .25rem 0;
 	outline: 0;
-	border-bottom: 1px solid #012636;
+	border-bottom: 1px solid var(--custom);
     
+	&.shake{
+		animation: shake 1s ease;
+	}
+
 	&::placeholder{
 		color: transparent;
 		font-size: 0.65rem;
@@ -37,21 +41,19 @@
 	
 	&:focus+.input-label,
 	&:valid+.input-label{
-        color: #012636;
+        color: var(--custom);
         transform: translateY(-1.5rem);
     }
 	
 	
 
     &:focus{
-        border-bottom: 1.5px solid #012636;
+        border-bottom: 1.5px solid var(--custom);
     }
 	&:focus::placeholder{
 		color: #8597a3;
 	}
 }
-
-
 
 
 .validation-detail {
@@ -60,7 +62,7 @@
     font-size: 0.875em;
 	
 	&.error{
-		color: #dc3545;
+		color: var(--danger);
 	}
 
 	&.info{

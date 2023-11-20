@@ -17,10 +17,10 @@
 
 
 .callout.callout-error {
-    border-left-color: #dc3545;
+    border-left-color: var(--danger);
 }
 
 .alert.alert-error {
-    background: #dc3545;
+    background: var(--danger);
     color: #fff;
 }

@@ -22,7 +22,7 @@ const Button = (props) => {
                 setTimeout(() => {
                     setStatus('none')
                     setButtonText(text)
-                }, 1000);
+                }, 1500);
             });
         }
 
@@ -32,10 +32,10 @@ const Button = (props) => {
        
     }
 
-    const btnClass = `${status === 'loading' ? 'button--loading' : status}`;
+    let btnClass = `${status === 'loading' ? 'button--loading' : status}`;
     return (
         <div className={`${customWrapClass} action`}>
-            <button className={`${btnClass} ${customClass} action-button`} onClick={handleClick} disabled={status === 'loading'} >
+            <button className={`${btnClass} ${customClass} action-button`} onClick={handleClick} disabled={status !== 'none'} >
                 <span className="button-text">{buttonText}</span>
             </button>
         </div>

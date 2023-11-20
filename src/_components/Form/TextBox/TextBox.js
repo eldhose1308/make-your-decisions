@@ -13,14 +13,14 @@ const TextBox = (props) => {
         onChange && onChange(value, id, lastValue, e)
     }
  
-   
+    
     return (
         <div className="input">
             <input 
                 id={`textbox_${id}`}
                 type={inputType} 
                 value={value}
-                className="form-element" 
+                className={`form-element ${customClass}`} 
                 placeholder={placeHolder} 
                 autoComplete="false" 
                 disabled={disabled} 

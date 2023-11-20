@@ -90,7 +90,7 @@ img {
 }
 
 .card-info a{
-	color: #012636;
+	color: var(--custom);
 	text-decoration: none;
 	margin: 0 10px;
 }
@@ -99,7 +99,7 @@ img {
 .highlight-line {
     width: 100%; 
     text-align: center; 
-    border-bottom: 1px solid #012636; 
+    border-bottom: 1px solid var(--custom); 
     line-height: 0.1em;
     margin: 20px 0; 
  } 

@@ -5,29 +5,38 @@
 .action-button {
     padding: 1em;
     width: 100%;
-    background-color: #012636;
+    background-color: var(--custom);
     border-radius: 6px;
     color: #FFF;
     border: 0;
     outline: 0;
     cursor: pointer;
     position: relative;
+    transition: background-color 1s ease;
 
     &.failure{
-        background-color: #dc3545;
+        background-color: var(--danger);
+        animation: shake 1s linear;
     }
 
     &.success{
-        background-color: #28a745;
+        background-color: var(--success);
+        animation: shake 1s linear;
     }
+
+  
+}
+
+button:disabled {
+    cursor: not-allowed;
 }
 
 .outline{
-    border: 1px solid #012636;
+    border: 1px solid var(--custom);
     background-color: transparent;
 
     &:hover{
-        background-color: #012636;
+        background-color: var(--custom);
     }
 }
 
@@ -38,7 +47,7 @@
 }
 
 .outline .button-text{
-    color: #012636;
+    color: var(--custom);
     font-weight: bold;
 }
 
@@ -103,4 +112,4 @@
     to {
       transform: rotate(1turn);
     }
-  }
+}
