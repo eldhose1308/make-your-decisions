@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/make-your-decisions/static/css/main.7a2bfad1.css",
-    "main.js": "/make-your-decisions/static/js/main.9b0e3cc2.js",
+    "main.js": "/make-your-decisions/static/js/main.37c5c387.js",
     "static/js/787.54c4742d.chunk.js": "/make-your-decisions/static/js/787.54c4742d.chunk.js",
     "static/media/lato-semibold.ttf": "/make-your-decisions/static/media/lato-semibold.4461d438f53d31c670c6.ttf",
     "static/media/lato-regular.ttf": "/make-your-decisions/static/media/lato-regular.79164ee524feb6583a94.ttf",
     "static/media/auth-bg.svg": "/make-your-decisions/static/media/auth-bg.841f3ab1d02f82005b55.svg",
     "index.html": "/make-your-decisions/index.html",
     "main.7a2bfad1.css.map": "/make-your-decisions/static/css/main.7a2bfad1.css.map",
-    "main.9b0e3cc2.js.map": "/make-your-decisions/static/js/main.9b0e3cc2.js.map",
+    "main.37c5c387.js.map": "/make-your-decisions/static/js/main.37c5c387.js.map",
     "787.54c4742d.chunk.js.map": "/make-your-decisions/static/js/787.54c4742d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7a2bfad1.css",
-    "static/js/main.9b0e3cc2.js"
+    "static/js/main.37c5c387.js"
   ]
 }
