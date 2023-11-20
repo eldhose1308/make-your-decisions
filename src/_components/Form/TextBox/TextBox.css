@@ -1,0 +1,89 @@
+
+.input {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	padding-top: 1.5rem;
+	&+.input {
+		margin-top: 1.5rem;
+	}
+}
+
+
+.input-label {
+	color: #8597a3;
+	position: absolute;
+	top: 1.5rem;
+	transition: .25s ease;
+}
+
+.form-element {
+	border: 0;
+	z-index: 1;
+	background-color: transparent;
+	border-bottom: 2px solid #eee; 
+	font: inherit;
+	font-size: 1rem;
+	padding: .25rem 0;
+	outline: 0;
+	border-bottom: 1px solid #012636;
+    
+	&::placeholder{
+		color: transparent;
+		font-size: 0.65rem;
+		position: relative;
+		left: 4px;
+	}
+	
+	&:focus+.input-label,
+	&:valid+.input-label{
+        color: #012636;
+        transform: translateY(-1.5rem);
+    }
+	
+	
+
+    &:focus{
+        border-bottom: 1.5px solid #012636;
+    }
+	&:focus::placeholder{
+		color: #8597a3;
+	}
+}
+
+
+
+
+.validation-detail {
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: 0.875em;
+	
+	&.error{
+		color: #dc3545;
+	}
+
+	&.info{
+		color: #0b73eb;
+	}
+
+	&.success{
+		color: #28a745
+	}
+}
+
+.validation-detail ul{
+	padding-left: 1rem;
+}
+
+
+.validation-detail li,
+.validation-detail p {
+    font-size: 13px;
+    line-height: 13px;
+    text-align: left;
+    background: #fff;
+    padding: 0.2rem;
+	margin: 0;
+}
+

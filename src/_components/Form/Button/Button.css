@@ -1,0 +1,106 @@
+.action {
+	margin-top: 2rem;
+}
+
+.action-button {
+    padding: 1em;
+    width: 100%;
+    background-color: #012636;
+    border-radius: 6px;
+    color: #FFF;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    position: relative;
+
+    &.failure{
+        background-color: #dc3545;
+    }
+
+    &.success{
+        background-color: #28a745;
+    }
+}
+
+.outline{
+    border: 1px solid #012636;
+    background-color: transparent;
+
+    &:hover{
+        background-color: #012636;
+    }
+}
+
+
+.button-text {
+    color: #ffffff;
+    transition: all 0.2s;
+}
+
+.outline .button-text{
+    color: #012636;
+    font-weight: bold;
+}
+
+
+.outline:hover .button-text{
+    color: #fff;
+}
+
+
+.button--loading{
+    opacity: 0.8;
+    /* animation: button-loading-bgcolor 7s infinite; */
+}
+
+.button--loading .button-text {
+    /* float: left; */
+    opacity: 0;
+}
+
+
+.button--loading::after {
+    content: "";
+    /* float: right; */
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border: 4px solid transparent;
+    border-top-color: #ffffff;
+    border-radius: 50%;
+    animation: button-loading-spinner 1s linear infinite;
+}
+
+
+@keyframes button-loading-bgcolor {
+    0%{
+        background-color: #03709f;
+    }
+    25%{
+        background-color: #02425e;
+    }
+    50%{
+        background-color: #023f59;
+    }
+    75%{
+        background-color: #02587d;
+    }
+    100%{
+        background-color: #0371a1;
+    }
+}
+
+@keyframes button-loading-spinner {
+    from {
+      transform: rotate(0turn);
+    }
+  
+    to {
+      transform: rotate(1turn);
+    }
+  }

@@ -1,0 +1,114 @@
+@font-face {
+    font-family: 'LatoRegular';
+    src: url('../../../public/fonts/lato-regular.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'LatoSemibold';
+    src: url('../../../public/fonts/lato-semibold.ttf') format('truetype');
+  }
+  
+
+*, *:after, *:before {
+	box-sizing: border-box;
+    font-family: LatoRegular;
+}
+
+body {
+	line-height: 1.5;
+	background-color: #f1f3fb;
+	padding: 0 2rem;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+.card {
+	margin: 2rem auto;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	max-width: 425px;
+	background-color: #FFF;
+	border-radius: 10px;
+	box-shadow: 0 10px 20px 0 rgba(#999, .25);
+	padding: .75rem;
+}
+
+.card-image {
+	border-radius: 8px;
+	overflow: hidden;
+	padding-bottom: 65%;
+	background-image: url('../../../public/img/auth-bg.svg');
+	background-repeat: no-repeat;
+	/* background-size: 150%; */
+	background-position: 0 5%;
+	position: relative;
+}
+
+.card-heading {
+	position: absolute;
+	left: 10%;
+	top: 15%;
+	right: 10%;
+	font-size: 1.75rem;
+	font-weight: 700;
+	color: #fefefe;
+	line-height: 1.222;
+	small {
+		display: block;
+		font-size: .75em;
+		font-weight: 400;
+		margin-top: .25em;
+	}
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgb(1 38 55 / 70%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  }
+
+.card-form {
+	padding: 2rem 1rem 0;
+}
+
+
+.card-info {
+	padding: 1rem 1rem;
+	text-align: center;
+	font-size: .875rem;
+	color: #8597a3;
+}
+
+.card-info a{
+	color: #012636;
+	text-decoration: none;
+	margin: 0 10px;
+}
+
+
+.highlight-line {
+    width: 100%; 
+    text-align: center; 
+    border-bottom: 1px solid #012636; 
+    line-height: 0.1em;
+    margin: 20px 0; 
+ } 
+
+ .highlight-line span { 
+	background: #fff; 
+	padding:0 10px; 
+}
+
+
+
+
