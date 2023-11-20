@@ -54,7 +54,7 @@ export default function SignUp() {
         e.preventDefault();
         const payload = { email, password }
         
-        if(!isValidForm(payload)) return false;
+        if(!isValidForm(payload)) throw new Error('Form not Validated');
 
         await signupUser(payload)
         .then(res => alert('Success'))

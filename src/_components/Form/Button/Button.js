@@ -11,10 +11,10 @@ const Button = (props) => {
         if(onAsyncClick){
             setStatus('loading')
             onAsyncClick(e)
-            .then(() => {
+            .then((res) => {
                 setStatus('success')
                 successText && setButtonText(successText)
-            }).catch(() => {
+            }).catch((err) => {
                 setStatus('failure')
                 failureText && setButtonText(failureText)
             })
@@ -44,4 +44,4 @@ const Button = (props) => {
 
 // Button.defaultProps = 
 
-export default Button
+export default React.memo(Button)
