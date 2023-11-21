@@ -5,10 +5,13 @@ import { GoogleLogin } from '@react-oauth/google';
 import { Button, TextBox } from '_components/Form'; 
 import { Alerts } from '_components/UI';
 
+import TopLoader  from '_components/UI/TopLoader/TopLoader'
+
 import useValidationMsg from "_hooks/useValidationMsg";
 
 import { signupUser } from "./_actions";
 import { isAValidEmail, isNotAValidPassword } from "_utils/Validations";
+
 
 import './index.css'
 
@@ -18,6 +21,8 @@ const initialValidationObj = {
 }
 
 export default function SignUp() {
+
+    const [ isLoading, setIsLoading ] = useState(false);
 
     const [ email, setEmail ] = useState('');
     const [ password, setPassword ] = useState('');
@@ -52,6 +57,7 @@ export default function SignUp() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setIsLoading(true)
         const payload = { email, password }
         
         if(!isValidForm(payload)) throw new Error('Form not Validated');
@@ -63,10 +69,14 @@ export default function SignUp() {
             setValidationObjError(message, 'serverResponse')
             throw err
         })
+        .finally(() => {
+            setIsLoading(false)
+        })
     }
 
     return (
         <React.Fragment>
+            {isLoading ? (<TopLoader />) : null}
             <div className="container">
                 <div className="card">
                     <div className="card-image">
