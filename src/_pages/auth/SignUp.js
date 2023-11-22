@@ -3,15 +3,13 @@ import { Link } from "react-router-dom";
 
 import { GoogleLogin } from '@react-oauth/google';
 import { Button, TextBox } from '_components/Form'; 
-import { Alerts } from '_components/UI';
-
-import TopLoader  from '_components/UI/TopLoader/TopLoader'
 
 import useValidationMsg from "_hooks/useValidationMsg";
 
 import { signupUser } from "./_actions";
 import { isAValidEmail, isNotAValidPassword } from "_utils/Validations";
 
+import { useTopLoader } from "_contexts/TopLoaderProvider";
 
 import './index.css'
 
@@ -22,7 +20,7 @@ const initialValidationObj = {
 
 export default function SignUp() {
 
-    const [ isLoading, setIsLoading ] = useState(false);
+    const [ showTopLoader, hideTopLoader ] = useTopLoader();
 
     const [ email, setEmail ] = useState('');
     const [ password, setPassword ] = useState('');
@@ -61,7 +59,7 @@ export default function SignUp() {
         
         if(!isValidForm(payload)) throw new Error('Form not Validated');
 
-        setIsLoading(true)
+        showTopLoader()
         await signupUser(payload)
         .then(res => console.log('Success'))
         .catch(err => {
@@ -70,13 +68,12 @@ export default function SignUp() {
             throw err
         })
         .finally(() => {
-            setIsLoading(false)
+            hideTopLoader()
         })
     }
 
     return (
         <React.Fragment>
-            {isLoading ? (<TopLoader />) : null}
             <div className="container">
                 <div className="card">
                     <div className="card-image">
