@@ -57,13 +57,13 @@ export default function SignUp() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        setIsLoading(true)
         const payload = { email, password }
         
         if(!isValidForm(payload)) throw new Error('Form not Validated');
 
+        setIsLoading(true)
         await signupUser(payload)
-        .then(res => alert('Success'))
+        .then(res => console.log('Success'))
         .catch(err => {
             const { message, status } = err;
             setValidationObjError(message, 'serverResponse')
@@ -88,8 +88,6 @@ export default function SignUp() {
                     </div>
                     <form className="card-form">
 
-                        {validationObj.serverResponse ? (<Alerts value={validationObj.serverResponse} />) : null}
-
                         <TextBox 
                             labelName="Email"  
                             id="email" 
@@ -111,7 +109,11 @@ export default function SignUp() {
                         <div className="highlight-line"><span>or</span></div>
 
                         <div className="d-flex-center">
-                            <GoogleLogin text="signup_with" onSuccess={() => {}} onError={() => {}} />
+                            <GoogleLogin 
+                                text="signup_with" 
+                                onSuccess={(credentialResponse) => { console.log(credentialResponse) }} 
+                                onError={() => { alert('Error') }} 
+                            />
                         </div>
 
                     </form>

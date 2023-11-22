@@ -2,8 +2,8 @@ import React from "react"
 import './TextBox.css'
 
 const TextBox = (props) => {
-    const { inputType = 'text', value, id, name, disabled, labelName, placeHolder, validationMessage = {}, onChange, customClass, minLength, maxLength = 0, regEx, customProps } = props;
-    const { type = 'error', message='' } = validationMessage;
+    const { inputType = 'text', value, id, name, disabled, labelName, placeHolder, validationMessage = {}, onChange, customClass, regEx, customProps } = props;
+    const { type = 'info', message='' } = validationMessage;
 
 
     const handleChange = (e) => {
@@ -18,9 +18,10 @@ const TextBox = (props) => {
         <div className="input">
             <input 
                 id={`textbox_${id}`}
+                name={name}
                 type={inputType} 
                 value={value}
-                className={`form-element ${customClass}`} 
+                className={`form-element ${customClass} ${type === 'error' ? ` danger` : ``}`} 
                 placeholder={placeHolder} 
                 autoComplete="false" 
                 disabled={disabled} 

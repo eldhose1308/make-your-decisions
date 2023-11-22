@@ -20,7 +20,7 @@ const useValidationMsg = (initialState = {}) => {
     const resetValidationObj = (key) => setValidationObj({ type: 'RESET', data: key })
     const resetAllValidationObj = (key) => setValidationObj({ type: 'RESET_ALL' })
 
-    const setValidationObjError = (message, key) => setValidationObj({ type: 'SET', data: {[key]: {type: 'error', message}  } })
+    const setValidationObjError = (message, key) => setValidationObj({ type: 'SET', data: {[key]: {type: message ? 'error' : 'info', message}  } })
     const setValidationObjInfo = (message, key) => setValidationObj({ type: 'SET', data: {[key]: {type: 'info', message}  } })
 
     return { 

@@ -9,12 +9,21 @@
 }
 
 .alert {
+    display: flex;
+    justify-content: space-between;
+    overflow: scroll;
+    max-height: 75px;
     border-radius: 0.25rem;
     margin-bottom: 1rem;
     padding: 1rem;
     font-size: .875rem;
+    animation: fadeIn 1s linear;
 }
 
+.close-alert{
+    cursor: pointer;
+    /* float: right; */
+}
 
 .callout.callout-error {
     border-left-color: var(--danger);
@@ -24,3 +33,11 @@
     background: var(--danger);
     color: #fff;
 }
+
+@keyframes fadeIn {
+    0% { width: 0%; color: transparent; }
+    25% { width: 25%; color: transparent; }
+    50% { width: 50%; color: transparent; } 
+    75% { width: 75%; }
+    100% { width: 100%; }
+  }
