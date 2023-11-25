@@ -120,8 +120,8 @@ export default function SignUp() {
                       <Link to="/signin">Go to SignIn</Link> /  
                        <Link to="#terms">Reset Password</Link>
                     </div>
-                    <Button customClass="outline" text="Continue as Guest" onClick={() => {alert('Hello Guest')}} />
-
+                    <Link to="/home"><Button customClass="outline" text="Continue as Guest" />
+                    </Link>
                 </div>
             </div>
 

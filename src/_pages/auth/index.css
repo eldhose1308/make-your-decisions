@@ -1,23 +1,10 @@
-@font-face {
-    font-family: 'LatoRegular';
-    src: url('../../../public/fonts/lato-regular.ttf') format('truetype');
-  }
 
-  @font-face {
-    font-family: 'LatoSemibold';
-    src: url('../../../public/fonts/lato-semibold.ttf') format('truetype');
-  }
-  
-
-*, *:after, *:before {
-	box-sizing: border-box;
-    font-family: LatoRegular;
-}
 
 body {
-	line-height: 1.5;
-	background-color: #f1f3fb;
-	padding: 0 2rem;
+	margin: 0;
+	/* line-height: 1.5; */
+	background-color: var(--gray);
+	/* padding: 0 2rem; */
 }
 
 img {

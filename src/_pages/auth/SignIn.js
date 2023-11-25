@@ -7,31 +7,31 @@ export default function SignIn() {
 
     return (
         <>
-            <div class="container">
-                <div class="card">
-                    <div class="card-image">
+            <div className="container">
+                <div className="card">
+                    <div className="card-image">
                         <div className="overlay"></div>
-                        <h2 class="card-heading">
+                        <h2 className="card-heading">
                             Already Got started-
                             <small>Let us dive into your account</small>
                         </h2>
                     </div>
 
-                    <form class="card-form">
-                        <div class="input">
-                            <input type="text" class="form-element" placeholder="Email" autoFocus />
+                    <form className="card-form">
+                        <div className="input">
+                            <input type="text" className="form-element" placeholder="Email" autoFocus />
                         </div>
-                        <div class="input">
-                            <input type="password" class="form-element" placeholder="Password" />
+                        <div className="input">
+                            <input type="password" className="form-element" placeholder="Password" />
                         </div>
-                        <div class="action">
-                            <button class="action-button">Sign In</button>
+                        <div className="action">
+                            <button className="action-button">Sign In</button>
                         </div>
                     </form>
 
                     <p className="text-muted">New here? <Link to="/">Go to SignUp</Link></p>
 
-                    <div class="card-info">
+                    <div className="card-info">
                         <p>Forgot your Password ? <a href="#terms">Reset Password</a></p>
                     </div>
                 </div>

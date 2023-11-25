@@ -8,6 +8,7 @@ import { SignIn, SignUp } from './_pages/auth'
 
 import { TopLoaderProvider } from "_contexts/TopLoaderProvider";
 import { GoogleOAuthProvider } from '@react-oauth/google';
+import Landing from "_pages/home/Landing/Landing";
 const clientId = "996420354509-0d4trcb21bdo1tm9k6jc5d95ootgf7h5.apps.googleusercontent.com";
 
 const router = createHashRouter([
@@ -18,6 +19,10 @@ const router = createHashRouter([
   {
     path: "/signin",
     element: <SignIn />,
+  },
+  {
+    path: "/home",
+    element: <Landing />,
   },
 ]);
 
