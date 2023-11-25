@@ -1,9 +1,11 @@
 import React from "react"
 import './TextBox.css'
+import { defaultProps } from "./props/defaultProps";
+import { propTypes } from "./props/propTypes";
 
 const TextBox = (props) => {
-    const { inputType = 'text', value, id, name, disabled, labelName, placeHolder, validationMessage = {}, onChange, customClass, regEx, customProps } = props;
-    const { type = 'info', message='' } = validationMessage;
+    const { inputType, value, id, name, disabled, labelName, placeHolder, validationMessage, onChange, customClass, customProps } = props; //regEx
+    const { type, message } = validationMessage;
 
 
     const handleChange = (e) => {
@@ -17,7 +19,7 @@ const TextBox = (props) => {
     return (
         <div className="input">
             <input 
-                id={`textbox_${id}`}
+                id={id}
                 name={name}
                 type={inputType} 
                 value={value}
@@ -34,5 +36,8 @@ const TextBox = (props) => {
         </div>
     )
 }
+
+TextBox.defaultProps = defaultProps
+TextBox.propTypes = propTypes;
 
 export default React.memo(TextBox);

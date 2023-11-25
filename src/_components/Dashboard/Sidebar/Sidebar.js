@@ -4,7 +4,7 @@ import Logo2 from "assets/logo/logo2.svg"
 
 import './Sidebar.css'
 
-const Sidebar = (props) => {
+const Sidebar = () => {
 
     return (
         <aside id="sidebar" className="sidebar open">

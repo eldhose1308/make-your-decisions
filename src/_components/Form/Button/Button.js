@@ -1,4 +1,8 @@
 import React, { useState } from 'react'
+
+import { defaultProps } from './props/defaultProps';
+import { propTypes } from './props/propTypes';
+
 import './Button.css'
 
 const Button = (props) => {
@@ -35,13 +39,18 @@ const Button = (props) => {
     let btnClass = `${status === 'loading' ? 'button--loading' : status}`;
     return (
         <div className={`${customWrapClass} action`}>
-            <button className={`${btnClass} ${customClass} action-button`} onClick={handleClick} disabled={status !== 'none'} >
+            <button 
+                className={`${btnClass} ${customClass} ${palette} action-button`} 
+                onClick={handleClick} 
+                disabled={disabled || status !== 'none'} 
+            >
                 <span className="button-text">{buttonText}</span>
             </button>
         </div>
     )
 }
 
-// Button.defaultProps = 
+Button.defaultProps = defaultProps
+Button.propTypes = propTypes;
 
 export default React.memo(Button)
