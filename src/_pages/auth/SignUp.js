@@ -75,15 +75,15 @@ export default function SignUp() {
     return (
         <React.Fragment>
             <div className="container">
-                <div className="card">
-                    <div className="card-image">
+                <div className="login-card">
+                    <div className="login-card-image">
                         <div className="overlay"></div>
-                        <h2 className="card-heading">
+                        <h2 className="login-card-heading">
                             Get started-
                             <small>Let us create your account</small>
                         </h2>
                     </div>
-                    <form className="card-form">
+                    <form className="login-card-form">
 
                         <TextBox 
                             labelName="Email"  
@@ -116,7 +116,7 @@ export default function SignUp() {
                     </form>
 
 
-                    <div className="card-info">
+                    <div className="login-card-info">
                       <Link to="/signin">Go to SignIn</Link> /  
                        <Link to="#terms">Reset Password</Link>
                     </div>

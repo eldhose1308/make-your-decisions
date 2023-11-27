@@ -50,13 +50,19 @@ box-sizing: border-box;
     margin-top: 0 !important;
 }
 
+.d-flex{
+  display: flex;
+}
+
 .d-flex-center{
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-
+.cursor-pointer{
+  cursor: pointer;
+}
 
 
 @keyframes shake {

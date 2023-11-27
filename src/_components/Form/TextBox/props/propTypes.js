@@ -13,6 +13,8 @@ export const propTypes = {
         message: PropTypes.oneOfType([ PropTypes.string, PropTypes.array ])
     }),
     onChange: PropTypes.func,
+    onClick: PropTypes.func,
+    onBlur: PropTypes.func,
     customClass: PropTypes.string,
     regEx: PropTypes.string,
     customProps: PropTypes.object,

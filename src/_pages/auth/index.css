@@ -7,12 +7,12 @@ body {
 	/* padding: 0 2rem; */
 }
 
-img {
+.login-img {
 	max-width: 100%;
 	display: block;
 }
 
-.card {
+.login-card {
 	margin: 2rem auto;
 	display: flex;
 	flex-direction: column;
@@ -24,7 +24,7 @@ img {
 	padding: .75rem;
 }
 
-.card-image {
+.login-card-image {
 	border-radius: 8px;
 	overflow: hidden;
 	padding-bottom: 65%;
@@ -35,7 +35,7 @@ img {
 	position: relative;
 }
 
-.card-heading {
+.login-card-heading {
 	position: absolute;
 	left: 10%;
 	top: 15%;
@@ -64,19 +64,19 @@ img {
 	justify-content: center;
   }
 
-.card-form {
+.login-card-form {
 	padding: 2rem 1rem 0;
 }
 
 
-.card-info {
+.login-card-info {
 	padding: 1rem 1rem;
 	text-align: center;
 	font-size: .875rem;
 	color: #8597a3;
 }
 
-.card-info a{
+.login-card-info a{
 	color: var(--custom);
 	text-decoration: none;
 	margin: 0 10px;

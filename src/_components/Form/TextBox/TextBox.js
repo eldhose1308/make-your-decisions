@@ -4,7 +4,7 @@ import { defaultProps } from "./props/defaultProps";
 import { propTypes } from "./props/propTypes";
 
 const TextBox = (props) => {
-    const { inputType, value, id, name, disabled, labelName, placeHolder, validationMessage, onChange, customClass, customProps } = props; //regEx
+    const { inputType, value, id, name, disabled, labelName, placeHolder, validationMessage, onChange, onClick, onBlur, customClass, customProps } = props; //regEx
     const { type, message } = validationMessage;
 
 
@@ -15,6 +15,13 @@ const TextBox = (props) => {
         onChange && onChange(value, id, lastValue, e)
     }
  
+    const handleClick = (e) => {
+        onClick && onClick(e)
+    }
+
+    const handleBlur = (e) => {
+        onBlur && onBlur(e);
+    }
     
     return (
         <div className="input">
@@ -28,6 +35,8 @@ const TextBox = (props) => {
                 autoComplete="false" 
                 disabled={disabled} 
                 onChange={handleChange}
+                onClick={handleClick}
+                onBlur={handleBlur}
                 // onKeyUp={handleKeyUp}
                 {...customProps}
             />

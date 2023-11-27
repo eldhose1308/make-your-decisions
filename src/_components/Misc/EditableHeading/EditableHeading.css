@@ -1,0 +1,15 @@
+.editable-heading{
+    margin: 1rem;
+    cursor: pointer;
+}
+
+.editable-heading-btn{
+    margin: 1rem;
+    cursor: pointer;
+
+}
+
+.editable-heading-btn .icon{
+    height: 20px;
+    font-weight: bold;
+}
