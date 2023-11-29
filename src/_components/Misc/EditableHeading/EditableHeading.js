@@ -65,7 +65,7 @@ const EditableHeading = (props) => {
                 : 
                 (
                     <div className="d-flex">
-                        <TextBox id="headingTextBox" validationMessage={validationObj.headingTextBox} value={textBoxValue} onChange={handleTextBoxChange} onBlur={handleOutsideClick} />
+                        <TextBox id="headingTextBox" validationMessage={validationObj.headingTextBox} value={textBoxValue} onChange={handleTextBoxChange} onBlur={handleOutsideClick} customClass="m-1" />
                         <span className="editable-heading-btn" onClick={handleSave}>
                             <img className="icon" src={SaveIcon} alt="edit-icon" />
                         </span>

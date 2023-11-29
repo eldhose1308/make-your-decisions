@@ -14,6 +14,7 @@
   --medium-gray: rgb(96, 96, 96);
   --dark-gray: rgb(13, 13, 13);
 
+  --sidebar-width: 200px;
   --header-height: 40px;
   --animation-duration: 200ms;
   --animation-timing-curve: ease-in-out;

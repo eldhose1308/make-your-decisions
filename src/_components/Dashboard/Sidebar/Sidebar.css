@@ -134,7 +134,7 @@
     position: absolute;
 }
 .sidebar.open {
-    width: 200px;
+    width: var(--sidebar-width);
 }
 
 .sidebar-username {

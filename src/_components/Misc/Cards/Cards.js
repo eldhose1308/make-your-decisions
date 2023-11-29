@@ -2,12 +2,21 @@ import React from "react";
 
 import './Cards.css'
 import EditableHeading from "../EditableHeading/EditableHeading";
+import CardsItem from "../CardsItem/CardsItem";
 
 const Cards = (props) => {
-    const { heading, headingId, options, onHeadingSubmit, onSubmit } = props;
+    const { heading, headingId, options, onHeadingSubmit, onOptionsEdit, onOptionsEditClose, onSubmit } = props;
 
     const handleEditableHeadingSubmit = (value) => {
         onHeadingSubmit && onHeadingSubmit(headingId, value)
+    }
+
+    const handleOptionsEdit = (option, id, value) => {
+        onOptionsEdit && onOptionsEdit(option, id, value)
+    } 
+
+    const handleOptionsEditClose = () => {
+        onOptionsEditClose && onOptionsEditClose()
     }
 
     return (
@@ -19,21 +28,17 @@ const Cards = (props) => {
                 </div>
 
                 <div className="card-body">
-                   {options.map(option => {
-                    const { id, value } = option;
-
-                    return (
-                        <div className="board-item">
-                            {value}
-                        </div>
-                    )
-                   })}
+                   {options.map(option => (
+                    <CardsItem option={option} onEdit={handleOptionsEdit} onEditClose={handleOptionsEditClose} />
+            
+                   ))}
                 </div>
 
                 <div className="card-footer">
 
                 </div>
             </div>
+
         </React.Fragment>
     )
 }

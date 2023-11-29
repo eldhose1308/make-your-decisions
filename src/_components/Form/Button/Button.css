@@ -57,6 +57,11 @@ button:disabled {
 }
 
 
+.action-button.w-20{
+    width: 20%;
+}
+
+
 .button--loading{
     opacity: 0.8;
     /* animation: button-loading-bgcolor 7s infinite; */

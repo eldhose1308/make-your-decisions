@@ -65,6 +65,19 @@
 	}
 }
 
+.form-element.m-1{
+	margin: 0 1rem;
+}
+
+
+.form-element.border-dashed{
+	border: 1px dashed var(--light-gray)
+}
+
+.form-element.ps-1{
+	padding: 0 1rem;
+}
+
 
 .validation-detail {
     width: 100%;

@@ -37,10 +37,12 @@ const Button = (props) => {
     }
 
     let btnClass = `${status === 'loading' ? 'button--loading' : status}`;
+    btnClass += customClass ? ` ${customClass}` : '';
+    btnClass += palette ? ` ${palette}` : '';
     return (
         <div className={`${customWrapClass} action`}>
             <button 
-                className={`${btnClass} ${customClass} ${palette} action-button`} 
+                className={`${btnClass} action-button`} 
                 onClick={handleClick} 
                 disabled={disabled || status !== 'none'} 
             >

@@ -6,3 +6,10 @@
     flex-direction: row;
     overflow: scroll;
 }
+
+.resize-card{
+	border: 1px solid var(--light-gray);
+	height: 20vh;
+	cursor: ew-resize;
+	
+}

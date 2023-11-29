@@ -1,12 +1,13 @@
-import React from "react"
+import React, { useEffect, useRef } from "react"
 import './TextBox.css'
 import { defaultProps } from "./props/defaultProps";
 import { propTypes } from "./props/propTypes";
 
 const TextBox = (props) => {
-    const { inputType, value, id, name, disabled, labelName, placeHolder, validationMessage, onChange, onClick, onBlur, customClass, customProps } = props; //regEx
+    const { inputType, value, id, name, disabled, labelName, placeHolder, validationMessage, onChange, onClick, onBlur, customClass, customProps, focusInput, inputRef } = props; //regEx
     const { type, message } = validationMessage;
 
+    let inputEle = useRef(null)
 
     const handleChange = (e) => {
         const value = e.target.value;
@@ -23,6 +24,19 @@ const TextBox = (props) => {
         onBlur && onBlur(e);
     }
     
+    // const handleRef = (ref) => {
+    //     inputEle.current = ref;
+    //     inputRef && inputRef(ref);
+    // }
+    
+
+    // useEffect(() => {
+    //     if(focusInput){
+    //         inputEle.current.autoFocus = true
+    //     }
+    // },[focusInput])
+    
+
     return (
         <div className="input">
             <input 
@@ -34,6 +48,7 @@ const TextBox = (props) => {
                 placeholder={placeHolder} 
                 autoComplete="false" 
                 disabled={disabled} 
+                // ref={handleRef}
                 onChange={handleChange}
                 onClick={handleClick}
                 onBlur={handleBlur}

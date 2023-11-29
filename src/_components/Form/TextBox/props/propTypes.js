@@ -18,4 +18,5 @@ export const propTypes = {
     customClass: PropTypes.string,
     regEx: PropTypes.string,
     customProps: PropTypes.object,
+    focusInput: PropTypes.bool
 }

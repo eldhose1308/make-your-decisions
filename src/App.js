@@ -12,7 +12,9 @@ import Sidebar from "_components/Dashboard/Sidebar/Sidebar";
 import { SignIn, SignUp } from './_pages/auth'
 
 import { TopLoaderProvider } from "_contexts/TopLoaderProvider";
+import { PortalsProvider } from "_contexts/PortalsProvider";
 import { GoogleOAuthProvider } from '@react-oauth/google';
+
 import Landing from "_pages/home/Landing/Landing";
 
 import useDecodeToken from "_hooks/useDecodeToken";
@@ -88,9 +90,11 @@ function App() {
     <React.Fragment>
       <GoogleOAuthProvider clientId={clientId}>
         
-        <TopLoaderProvider>
-          <RouterProvider router={router} />
-        </TopLoaderProvider>
+        <PortalsProvider>
+          <TopLoaderProvider>
+            <RouterProvider router={router} />
+          </TopLoaderProvider>
+        </PortalsProvider>
 
       </GoogleOAuthProvider>
     </React.Fragment>
