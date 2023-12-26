@@ -1,19 +1,22 @@
 {
   "files": {
-    "main.css": "/make-your-decisions/static/css/main.5ab835e3.css",
-    "main.js": "/make-your-decisions/static/js/main.f07e3541.js",
+    "main.css": "/make-your-decisions/static/css/main.904c55c2.css",
+    "main.js": "/make-your-decisions/static/js/main.fff0f2bd.js",
     "static/js/787.54c4742d.chunk.js": "/make-your-decisions/static/js/787.54c4742d.chunk.js",
     "static/media/lato-semibold.ttf": "/make-your-decisions/static/media/lato-semibold.4461d438f53d31c670c6.ttf",
     "static/media/lato-regular.ttf": "/make-your-decisions/static/media/lato-regular.79164ee524feb6583a94.ttf",
     "static/media/auth-bg.svg": "/make-your-decisions/static/media/auth-bg.841f3ab1d02f82005b55.svg",
     "static/media/logo2.svg": "/make-your-decisions/static/media/logo2.62846e9a3e2e4adc53a0121a0ac5a1d3.svg",
+    "static/media/edit-icon.svg": "/make-your-decisions/static/media/edit-icon.e78227d36d72b2148c0129eadef853d3.svg",
     "index.html": "/make-your-decisions/index.html",
-    "main.5ab835e3.css.map": "/make-your-decisions/static/css/main.5ab835e3.css.map",
-    "main.f07e3541.js.map": "/make-your-decisions/static/js/main.f07e3541.js.map",
+    "static/media/clear-icon.svg": "/make-your-decisions/static/media/clear-icon.705b65e3bd592cffcc6e2e01c758a696.svg",
+    "static/media/save-icon.svg": "/make-your-decisions/static/media/save-icon.63d2aee21e020fbb96ef303f2ea89679.svg",
+    "main.904c55c2.css.map": "/make-your-decisions/static/css/main.904c55c2.css.map",
+    "main.fff0f2bd.js.map": "/make-your-decisions/static/js/main.fff0f2bd.js.map",
     "787.54c4742d.chunk.js.map": "/make-your-decisions/static/js/787.54c4742d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5ab835e3.css",
-    "static/js/main.f07e3541.js"
+    "static/css/main.904c55c2.css",
+    "static/js/main.fff0f2bd.js"
   ]
 }
