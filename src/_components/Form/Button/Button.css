@@ -27,6 +27,11 @@
   
 }
 
+button.btn-muted {
+    /* border: 1px solid red; */
+    background: var(--light-gray);
+}
+
 button:disabled {
     cursor: not-allowed;
 }

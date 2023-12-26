@@ -36,6 +36,10 @@ box-sizing: border-box;
   font-family: LatoRegular;
 }
 
+.icon{
+  height: 20px;
+  font-weight: bold;
+}
 
 .text-muted{
     text-align: center;

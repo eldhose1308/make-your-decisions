@@ -15,7 +15,7 @@ import { TopLoaderProvider } from "_contexts/TopLoaderProvider";
 import { PortalsProvider } from "_contexts/PortalsProvider";
 import { GoogleOAuthProvider } from '@react-oauth/google';
 
-import Landing from "_pages/home/Landing/Landing";
+import Board from "_pages/home/Board/Board";
 
 import useDecodeToken from "_hooks/useDecodeToken";
 
@@ -70,8 +70,8 @@ const router = createHashRouter([
     element: <WithDashboardLayout />,
     children: [
       {
-        path: "/home",
-        element: <Landing />,
+        path: "/home/board",
+        element: <Board />,
       },
       {
         path: "/home/settings",

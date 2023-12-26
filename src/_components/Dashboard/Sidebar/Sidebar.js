@@ -1,8 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
+import { MENU_ITEMS } from "_constants/SidebarValues";
 
 import Logo2 from "assets/logo/logo2.svg"
 
 import './Sidebar.css'
+
+const { topMenuItems } = MENU_ITEMS;
 
 const Sidebar = (props) => {
     const { userInfo } = props;
@@ -18,59 +23,33 @@ const Sidebar = (props) => {
             </div>
             <div className="middle-sidebar">
                 <ul className="sidebar-list">
-                    <li className="sidebar-list-item active">
-                        <a href="#" className="sidebar-link">
-                            <svg className="sidebar-icon" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false">
-                                <g>
-                                    <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"></path>
-                                </g>
-                            </svg>
-                            <div className="hidden-sidebar">Dashboard</div>
-                        </a>
-                    </li>
-                    <li className="sidebar-list-item">
-                        <a href="#" className="sidebar-link">
-                            <svg className="sidebar-icon" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false">
+
+                    {topMenuItems.map(menuItem => {
+                        const { id, text, route, svg } = menuItem;
+                        return (<li key={id} className="sidebar-list-item">
+                            <Link to={route} className="sidebar-link">
+                                <svg className="sidebar-icon" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false">
                                     <g>
-                                        <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"></path>
+                                        {svg}
                                     </g>
-                            </svg>
-                            <div className="hidden-sidebar">Board</div>
-                        </a>
-                    </li>
-                    <li className="sidebar-list-item">
-                        <a href="#" className="sidebar-link">
-                            <svg className="sidebar-icon" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false">
-                                    <g>
-                                        <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"></path>
-                                    </g>
-                            </svg>
-                            <div className="hidden-sidebar">Pre-sets</div>
-                        </a>
-                    </li>
-                    <li className="sidebar-list-item">
-                        <a href="#" className="sidebar-link">
-                            <svg className="sidebar-icon" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false">
-                                    <g>
-                                        <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"></path>
-                                    </g>
-                            </svg>
-                            <div className="hidden-sidebar">History</div>
-                        </a>
-                    </li>
-                 
-                   
-                    
-                    
-                   
-                   
+                                </svg>
+                                <div className="hidden-sidebar">{text}</div>
+                            </Link>
+                        </li>)
+                    })}
+
+
+
+
+
+
                 </ul>
             </div>
             <div className="bottom-sidebar">
                 <ul className="sidebar-list">
-                
+
                     <li className="sidebar-list-item">
-                        <a href="#" className="sidebar-link">
+                        <Link to="settings" className="sidebar-link">
                             <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" className="sidebar-icon">
                                 <g>
                                     <path
@@ -79,7 +58,7 @@ const Sidebar = (props) => {
                                 </g>
                             </svg>
                             <div className="hidden-sidebar">Settings</div>
-                        </a>
+                        </Link>
                     </li>
                     <li className="sidebar-list-item">
                         <a href="#" className="sidebar-link">

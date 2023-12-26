@@ -7,9 +7,9 @@ const TextBoxWithBtn = (props) => {
 
     return (
         <React.Fragment>
-            <div style={{display: 'flex'}}>
+            <div style={{position: 'relative'}}>
                 <TextBox />
-                <Button text=">" />
+                <Button text=">"  />
             </div>
         </React.Fragment>
     )

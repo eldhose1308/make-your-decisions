@@ -7,5 +7,6 @@ export const defaultProps =  {
         type: 'info',
         message: ''
     }, 
-    focusInput: false
+    focusInput: false,
+    value: ''
 }

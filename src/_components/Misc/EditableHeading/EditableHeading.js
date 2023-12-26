@@ -41,9 +41,8 @@ const EditableHeading = (props) => {
     }
 
     const handleOutsideClick = (e) => {
-        // const { value = 'dd' } = e.target;
-       
-        // handleSave(value, e);
+        const { target } = e;
+        handleSave();
     } 
 
     const handleTextBoxChange = (value) => {
@@ -52,7 +51,7 @@ const EditableHeading = (props) => {
 
     return (
         <React.Fragment>
-            <div className="editable-heading-container">
+            <div className="editable-heading-container" onBlur={handleOutsideClick}>
                 {!isTextBoxVisible ? 
                 ( 
                     <div className="d-flex">
@@ -65,10 +64,10 @@ const EditableHeading = (props) => {
                 : 
                 (
                     <div className="d-flex">
-                        <TextBox id="headingTextBox" validationMessage={validationObj.headingTextBox} value={textBoxValue} onChange={handleTextBoxChange} onBlur={handleOutsideClick} customClass="m-1" />
-                        <span className="editable-heading-btn" onClick={handleSave}>
+                        <TextBox id="headingTextBox" validationMessage={validationObj.headingTextBox} value={textBoxValue} onSubmit={handleSave} onChange={handleTextBoxChange} focusInput customClass="m-1" />
+                        {/* <span className="editable-heading-btn" onClick={handleSave}>
                             <img className="icon" src={SaveIcon} alt="edit-icon" />
-                        </span>
+                        </span> */}
                     
                     </div>
                 ) }
