@@ -12,7 +12,7 @@ import Sidebar from "_components/Dashboard/Sidebar/Sidebar";
 import { SignIn, SignUp } from './_pages/auth'
 
 import { TopLoaderProvider } from "_contexts/TopLoaderProvider";
-import { PortalsProvider } from "_contexts/PortalsProvider";
+// import { PortalsProvider } from "_contexts/PortalsProvider";
 import { GoogleOAuthProvider } from '@react-oauth/google';
 
 import Board from "_pages/home/Board/Board";
@@ -90,11 +90,11 @@ function App() {
     <React.Fragment>
       <GoogleOAuthProvider clientId={clientId}>
         
-        <PortalsProvider>
+        {/* <PortalsProvider> */}
           <TopLoaderProvider>
             <RouterProvider router={router} />
           </TopLoaderProvider>
-        </PortalsProvider>
+        {/* </PortalsProvider> */}
 
       </GoogleOAuthProvider>
     </React.Fragment>

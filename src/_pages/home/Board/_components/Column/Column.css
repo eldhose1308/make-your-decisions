@@ -1,0 +1,19 @@
+.board-columns-heading{    color: var(--medium-gray);
+    font-size: 1.1rem;
+    font-weight: bold;}
+
+    .board-columns-heading span{
+        font-size: 0.875rem;
+        color: var(--light-gray);
+    }
+    
+.board-columns-heading span:hover{
+    visibility: visible;
+    /* font-size: 1.75rem; */
+    color: var(--custom);
+}
+
+.board-column-actions{
+    margin: auto 0 auto auto;
+    cursor: pointer;
+}

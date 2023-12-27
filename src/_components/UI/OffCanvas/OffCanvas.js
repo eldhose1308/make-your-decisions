@@ -4,13 +4,10 @@ import Portal from "_components/Misc/Portal";
 import './OffCanvas.css'
 
 const OffCanvas = (props) => {
-    const { heading, isOffcanvasShown = false, children } = props;
+    const { heading, isActive = false, onClose, children } = props;
 
-    const [ isActive, setIsActive ] = useState(isOffcanvasShown);
 
-    useEffect(() => {
-        // alert('OffCanvas')
-    },[])
+   
 
     if(!isActive){
         return null
@@ -23,7 +20,7 @@ const OffCanvas = (props) => {
              <div className={`offcanvas offcanvas-bottom ${isActive ? 'show' : 'hide'}`}>
                 <div className="offcanvas-header">
                     {/* <h3 className="header-title">Edit Option</h3> */}
-                    <span className="offcanvas-close" onClick={() => {setIsActive(false)}}>x</span>
+                    <span className="offcanvas-close" onClick={onClose}>Close x</span>
                 </div>
                 
                 <div className="offcanvas-body">

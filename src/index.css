@@ -7,11 +7,11 @@
 
   --dark: #010101;
   --white: #fefefe;
-  --gray: #f1f3fb;
+  --gray: #f8f9fa;
 
   --lightest-gray: #dde1e3;
   --light-gray: rgb(144, 144, 144);
-  --medium-gray: rgb(96, 96, 96);
+  --medium-gray: #828fa3;
   --dark-gray: rgb(13, 13, 13);
 
   --sidebar-width: 200px;

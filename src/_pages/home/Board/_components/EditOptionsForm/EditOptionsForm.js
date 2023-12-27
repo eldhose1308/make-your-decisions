@@ -4,6 +4,8 @@ import { Button, TextBox } from "_components/Form";
 import useValidationMsg from "_hooks/useValidationMsg";
 import { containsSpecialChars } from "_utils/Validations";
 
+import './EditOptionsForm.css'
+
 const EditOptionForm = (props) => {
     const { optionObj = {}, onSubmit, focus } = props;
     const { id, optionId, value, addMode } = optionObj;
@@ -11,7 +13,7 @@ const EditOptionForm = (props) => {
     const { validationObj, setValidationObjError } = useValidationMsg();
 
 
-    const [ option, setOption ] = useState(value);
+    const [option, setOption] = useState(value);
     const inputRef = useRef(null)
 
     const handleOptionChange = (value, id, lastValue) => {
@@ -23,10 +25,10 @@ const EditOptionForm = (props) => {
 
 
     const handleUpdate = () => {
-        const updatedObj = { value : option, id }
-        
+        const updatedObj = { value: option, id }
+
         const optionError = containsSpecialChars(option)
-        if(optionError){
+        if (optionError) {
             setValidationObjError(optionError, 'optionText')
             return
         }
@@ -41,24 +43,32 @@ const EditOptionForm = (props) => {
     useEffect(() => {
         setOption(value)
         inputRef.current.focus()
-    },[value])
-   
+    }, [value])
+
     useEffect(() => {
         inputRef.current.focus()
-    },[])
+    }, [])
 
     return (
         <React.Fragment>
-            <TextBox 
-                id="optionText" 
-                labelName={`${addMode ? `Add` : `Update`} Option value`} 
-                onSubmit={handleUpdate} 
-                inputRef={handleRef} 
-                onChange={handleOptionChange} 
-                value={option} 
-                validationMessage={validationObj.optionText}
-            />
-           
+            <div className="card">
+                <div className="card-header">
+                    <h3 className="card-title">{`${addMode ? `Add` : `Update`} Option value`}</h3>
+                </div>
+
+                <div className="card-body">
+                    <TextBox
+                        id="optionText"
+                        // labelName=
+                        onSubmit={handleUpdate}
+                        inputRef={handleRef}
+                        onChange={handleOptionChange}
+                        value={option}
+                        validationMessage={validationObj.optionText}
+                    />
+
+                </div>
+            </div>
             <Button text={`${addMode ? `Add` : `Update`}`} onClick={handleUpdate} customClass="w-50" />
         </React.Fragment>
     )

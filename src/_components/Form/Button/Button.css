@@ -32,6 +32,26 @@ button.btn-muted {
     background: var(--light-gray);
 }
 
+button.btn-outline-muted{
+    border: 1px solid var(--medium-gray);
+    background-color: transparent;
+
+    & .button-text{
+        color: var(--medium-gray);
+        font-weight: bold;
+        /* font-size: 0.875rem; */
+    }
+}
+
+button.btn-outline-muted:hover{
+    border: none;
+    background-color: var(--medium-gray);
+    
+    & .button-text{
+        color: var(--white);
+    }
+}
+
 button:disabled {
     cursor: not-allowed;
 }

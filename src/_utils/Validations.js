@@ -4,7 +4,8 @@ export const containsSpecialChars = (str, id = null, enteredValue = '') => {
     if(str.length === 0 ) return `${idField} field should not be empty`
 
     const specialChars = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
-    return specialChars.test(str) ? `${idField} field cannot contain special characters ${enteredValue ? `like ${enteredValue}` : ``}` : false;
+    const enteredValueIsIssue = specialChars.test(enteredValue)
+    return specialChars.test(str) ? `${idField} field cannot contain special characters ${enteredValue && enteredValueIsIssue ? `like ${enteredValue}` : ``}` : false;
 }
 
 export const isAValidEmail = (str, id = null) => {

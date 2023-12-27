@@ -6,6 +6,7 @@
 .content {
     margin: 1rem;
     overflow: scroll;
+    width: 100%;
 }
 /* Move to Template */
 

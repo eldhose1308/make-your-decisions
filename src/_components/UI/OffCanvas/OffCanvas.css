@@ -9,6 +9,11 @@
     /* transition: right 300ms ease-in-out; */
 }
 
+.offcanvas-body{
+    padding: 1rem;
+
+}
+
 @keyframes slide-in {
     from {
         right: -500px;
@@ -32,6 +37,7 @@
 .offcanvas-header {
     display: flex;
     justify-content: space-between;
+    padding: 1rem;
 }
 
 

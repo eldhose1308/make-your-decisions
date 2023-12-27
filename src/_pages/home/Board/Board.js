@@ -3,11 +3,11 @@ import React, { useState } from "react";
 import EditableHeading from "_components/Misc/EditableHeading/EditableHeading";
 import CardsGroup from "_components/Misc/CardsGroup/CardsGroup";
 
-import { useOffCanvas } from "_contexts/PortalsProvider";
+import useOffCanvas from "_hooks/useOffCanvas";
 
 import './Board.css'
 
-import EditOptionForm from "./EditOpionsForm";
+import EditOptionForm from "./_components/EditOptionsForm/EditOptionsForm";
 import OffCanvas from "_components/UI/OffCanvas/OffCanvas";
 import Columns from "./_components/Column/Columns";
 
@@ -15,39 +15,103 @@ import Columns from "./_components/Column/Columns";
 const optionsObj = {
   1: {
     optionId: 1,
-    optionName: 'Option 1',
+    optionName: 'React JS',
     optionItems: {
-      1: {
-        id: 1,
-        value: 'Nothing'
+      11: {
+        id: 11,
+        value: ' JavaScript and JSX '
       },
-      2: {
-        id: 2,
-        value: 'Something'
-      }
+      12: {
+        id: 12,
+        value: 'Relatively easier'
+      },
+      13: {
+        id: 13,
+        value: 'Virtual DOM   '
+      },
+      14: {
+        id: 14,
+        value: 'Component-based'
+      },
+      15: {
+        id: 15,
+        value: 'One-way (top-down)'
+      },
+      16: {
+        id: 16,
+        value: 'Lightweight and faster'
+      },
     }
   },
   2: {
     optionId: 2,
-    optionName: 'Option 2',
+    optionName: 'Angular JS',
     optionItems: {
-      3: {
-        id: 3,
-        value: 'Anything'
+      21: {
+        id: 21,
+        value: 'TypeScript and HTML '
       },
-      4: {
-        id: 4,
-        value: 'What thing'
-      }
+      22: {
+        id: 22,
+        value: 'Steeper'
+      },
+      23: {
+        id: 23,
+        value: 'Real DOM'
+      },
+      24: {
+        id: 24,
+        value: 'Full MVC'
+      },
+      25: {
+        id: 25,
+        value: 'Two-way (bidirectional)'
+      },
+      26: {
+        id: 26,
+        value: 'Heavier and slower '
+      },
+    }
+  },
+  3: {
+    optionId: 3,
+    optionName: 'Vue JS',
+    optionItems: {
+      31: {
+        id: 31,
+        value: 'JavaScript'
+      },
+      32: {
+        id: 32,
+        value: 'Relatively easier'
+      },
+      33: {
+        id: 33,
+        value: 'Virtual DOM '
+      },
+      34: {
+        id: 34,
+        value: 'Component-based '
+      },
+      35: {
+        id: 35,
+        value: 'Two-way (bidirectional)'
+      },
+      36: {
+        id: 36,
+        value: 'Lightweight and performs wel'
+      },
     }
   }
 }
 
 const Board = () => {
-  const [headingName, setHeadingName] = useState('This is the heading');
+  const [headingName, setHeadingName] = useState("What technology to study for front-end developement ?");
   const [options, setOptions] = useState(optionsObj) // make a reducer for this
 
   const [optionEditing, setOptionEditing] = useState(0)
+
+  const { showOffCanvas, hideOffCanvas, isOffcanvasShown } = useOffCanvas()
 
   const handleoptionNameSubmit = (id, value) => {
     const newOptions = { ...options, [id]: { ...options[id], optionName: value } }
@@ -71,6 +135,7 @@ const Board = () => {
 
   const handleItemEdit = (option, optionId, e) => {
     setOptionEditing({ ...option, optionId })
+    showOffCanvas()
   }
 
   const handleoptionNameChange = (value, e) => {
@@ -86,6 +151,7 @@ const Board = () => {
     const newOption = { id: latestOptionId, value: '' }
 
     setOptionEditing({ ...newOption, optionId, addMode: true })
+    showOffCanvas()
   }
 
   const handleOptionAdd = () => {
@@ -113,7 +179,9 @@ const Board = () => {
 
   return (
     <React.Fragment>
+      <div className="content-heading">
       <EditableHeading heading={headingName} onSubmit={handleoptionNameChange} />
+      </div>
 
       <div className="board-columns-container">
         {Object.values(options).map(optionItem => {
@@ -137,7 +205,7 @@ const Board = () => {
 
       {optionEditing ?
         (
-          <OffCanvas isOffcanvasShown>
+          <OffCanvas isActive={isOffcanvasShown} onClose={hideOffCanvas} >
             <EditOptionForm optionObj={optionEditing} focus={false} onSubmit={handleOptionSubmit} />
           </OffCanvas>
         ) : null
