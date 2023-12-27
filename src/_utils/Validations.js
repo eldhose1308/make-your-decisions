@@ -1,6 +1,9 @@
 export const containsSpecialChars = (str, id = null, enteredValue = '') => {
-    const specialChars = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
     const idField = id ? (id.charAt(0).toUpperCase() + id.substring(1)) : 'This';
+
+    if(str.length === 0 ) return `${idField} field should not be empty`
+
+    const specialChars = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
     return specialChars.test(str) ? `${idField} field cannot contain special characters ${enteredValue ? `like ${enteredValue}` : ``}` : false;
 }
 

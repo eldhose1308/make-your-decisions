@@ -85,7 +85,7 @@ const Board = () => {
     const latestOptionId = Date.now();
     const newOption = { id: latestOptionId, value: '' }
 
-    setOptionEditing({ ...newOption, optionId })
+    setOptionEditing({ ...newOption, optionId, addMode: true })
   }
 
   const handleOptionAdd = () => {

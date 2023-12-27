@@ -54,6 +54,9 @@ const TextBox = (props) => {
         inputRef && inputRef(inputEle.current);
     }
     
+    useEffect(() => {
+        setInputValue(value)
+    },[value])
 
     // useEffect(() => {
     //     if(focusInput){

@@ -5,6 +5,7 @@
 
 .content {
     margin: 1rem;
+    overflow: scroll;
 }
 /* Move to Template */
 

@@ -22,7 +22,7 @@ const OffCanvas = (props) => {
         // <Portal>
              <div className={`offcanvas offcanvas-bottom ${isActive ? 'show' : 'hide'}`}>
                 <div className="offcanvas-header">
-                    <h3 className="header-title">Edit Option</h3>
+                    {/* <h3 className="header-title">Edit Option</h3> */}
                     <span className="offcanvas-close" onClick={() => {setIsActive(false)}}>x</span>
                 </div>
                 

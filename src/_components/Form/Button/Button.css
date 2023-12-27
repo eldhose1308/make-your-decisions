@@ -66,6 +66,10 @@ button:disabled {
     width: 20%;
 }
 
+.action-button.w-50{
+    width: 50%;
+}
+
 
 .button--loading{
     opacity: 0.8;

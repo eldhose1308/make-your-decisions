@@ -1,6 +1,7 @@
 .offcanvas {
     padding: 0.875rem;
-    background-color: var(--lightest-gray);
+    border: 1px solid var(--custom);
+    background-color: var(--gray);
     position: fixed;
     right: -500px;
     top: 0;
@@ -40,7 +41,7 @@
 }
 
 .offcanvas-bottom {
-    width: 30%;
+    width: 40%;
     height: 100%;
 }
 

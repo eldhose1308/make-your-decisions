@@ -26,7 +26,7 @@ export default function Columns(props){
     return (
         <div className="board-columns"  onDrop={handleOnDrop} onDragOver={(e) =>  e.preventDefault() } >
             <div>
-            <p className="board-columns-heading" contentEditable>{text}</p>
+            <p className="board-columns-heading">{text}</p>
             </div>
 
             <div>
