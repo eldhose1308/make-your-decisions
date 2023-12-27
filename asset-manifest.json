@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/make-your-decisions/static/css/main.860d2f0a.css",
-    "main.js": "/make-your-decisions/static/js/main.d53cfe42.js",
+    "main.css": "/make-your-decisions/static/css/main.102cdb23.css",
+    "main.js": "/make-your-decisions/static/js/main.95047b9f.js",
     "static/js/787.54c4742d.chunk.js": "/make-your-decisions/static/js/787.54c4742d.chunk.js",
     "static/media/lato-semibold.ttf": "/make-your-decisions/static/media/lato-semibold.4461d438f53d31c670c6.ttf",
     "static/media/lato-regular.ttf": "/make-your-decisions/static/media/lato-regular.79164ee524feb6583a94.ttf",
@@ -11,12 +11,12 @@
     "index.html": "/make-your-decisions/index.html",
     "static/media/clear-icon.svg": "/make-your-decisions/static/media/clear-icon.705b65e3bd592cffcc6e2e01c758a696.svg",
     "static/media/save-icon.svg": "/make-your-decisions/static/media/save-icon.63d2aee21e020fbb96ef303f2ea89679.svg",
-    "main.860d2f0a.css.map": "/make-your-decisions/static/css/main.860d2f0a.css.map",
-    "main.d53cfe42.js.map": "/make-your-decisions/static/js/main.d53cfe42.js.map",
+    "main.102cdb23.css.map": "/make-your-decisions/static/css/main.102cdb23.css.map",
+    "main.95047b9f.js.map": "/make-your-decisions/static/js/main.95047b9f.js.map",
     "787.54c4742d.chunk.js.map": "/make-your-decisions/static/js/787.54c4742d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.860d2f0a.css",
-    "static/js/main.d53cfe42.js"
+    "static/css/main.102cdb23.css",
+    "static/js/main.95047b9f.js"
   ]
 }
